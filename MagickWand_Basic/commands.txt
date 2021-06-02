@@ -1,2 +1,4 @@
-cc -o [output_file_name] [file_name].c `pkg-config --cflags --libs MagickWand`
-
+1. cc -o [output_file_name] [file_name].c `pkg-config --cflags --libs MagickWand`
+2. magick identify -list format       -> to get the list of supported image type on the system
+3. magick identify -verbose testing   -> Image details
+4.

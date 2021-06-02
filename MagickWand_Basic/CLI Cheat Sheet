@@ -1,0 +1,9 @@
+
+Url : https://imagemagick.org/script/command-line-options.php#size
+
+
+-verbose image.jpg               ->  Complete image Details
+-list    format                  -> List all available options
+-print   "%[colorspace]\n" null: -> 
+
+-size width[xheight][+offset]    -> Set the width and height of the image.
