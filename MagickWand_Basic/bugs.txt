@@ -1,0 +1,6 @@
+*** Basic1 ***  ( https://imagemagick.org/MagickWand/logo_1.htm )
+
+// Header should be replaced by #include <MagickWand/MagickWand.h>
+
+
+

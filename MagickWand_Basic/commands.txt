@@ -1,0 +1,2 @@
+cc -o [output_file_name] [file_name].c `pkg-config --cflags --libs MagickWand`
+

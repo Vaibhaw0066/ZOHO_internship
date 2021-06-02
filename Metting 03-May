@@ -1,0 +1,17 @@
+
+
+
+1. Resizing
+2. Format conversion - wmf, emf  to png
+
+we convert to png and resize
+
+-> Multi-Threading   ?
+-> JVM process works ?
+-> 
+-> concept: JNI , JNA ->  connect JAVA with C API  
+
+
+
+**Clarity
+
