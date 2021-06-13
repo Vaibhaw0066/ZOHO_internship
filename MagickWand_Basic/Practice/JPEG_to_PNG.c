@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <MagickWand/MagickWand.h>
+#include <string.h>
 
-void test_wand(void)
+void test_wand(char *filename,char *outfile)
 {
 	MagickWand *mw = NULL;
 
@@ -9,16 +10,18 @@ void test_wand(void)
 
 	/* Create a wand */
 	mw = NewMagickWand();
-
+	printf("searching in : %s",filename);
 	/* Read the input image */
-	if(MagickReadImage(mw,"testing.jpg")==MagickFalse){
+	if(MagickReadImage(mw,filename)==MagickFalse){
 	printf("Image not found!\n");
 	}else{
 	printf("Image selected and converted to PNG\n");
 	}
 	
 	/* write it */
-	MagickWriteImage(mw,"converted.png");
+	char *format = ".png";
+	strcat(outfile,format);
+	MagickWriteImage(mw,outfile);
 
 	/* Tidy up */
 	if(mw) mw = DestroyMagickWand(mw);
@@ -27,9 +30,17 @@ void test_wand(void)
 	//printf("All working!\n\n");
 }
 
-int main(){
+int main(int argc,char **argv){
 
-test_wand();
+	
+	if(argc==3){
+
+		char *filename = argv[1];
+		char *outfile  = argv[2];
+		test_wand(filename,outfile);
+		
+		}
+	
 return 0;
 }
 

@@ -1,0 +1,3 @@
+1. https://imagemagick.org/MagickWand/code_index.htm
+2. Functions: https://imagemagick.org/api/magick-wand.php#MagickWandTerminus
+
