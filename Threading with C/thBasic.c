@@ -35,7 +35,4 @@ int main(){
      yourTurn();
      myTurn(NULL);
    
-
-
-
 }
