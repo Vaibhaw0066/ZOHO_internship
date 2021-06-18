@@ -36,7 +36,7 @@ import com.sun.jna.Structure.FieldOrder;
 		
 		public interface CLib extends Library {
 			
-			CLib INSTANCE = (CLib)Native.load("/home/vaibhaw/Desktop/ZOHO_internship/JAVA Practice/jnaBasics/JNA/src/sharedLib/struct.so",CLib.class);
+			CLib INSTANCE = (CLib)Native.load("/home/vaibhaw/Desktop/ZOHO_internship/JAVA Practice/jnaBasics/jna2/src/sharedLib/struct.so",CLib.class);
 			
 			public void printByReference(structC data);
 			public void printByReference2(NativeStructure data);

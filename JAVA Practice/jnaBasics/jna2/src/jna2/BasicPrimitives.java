@@ -10,7 +10,7 @@ public class BasicPrimitives{
 	
 	interface Clib extends Library{
 		
-		Clib INSTANCE = (Clib)Native.load("/home/vaibhaw/Desktop/ZOHO_internship/JAVA Practice/jnaBasics/JNA/src/sharedLib/primivte.so", Clib.class);
+		Clib INSTANCE = (Clib)Native.load("/home/vaibhaw/Desktop/ZOHO_internship/JAVA Practice/jnaBasics/jna2/src/sharedLib/primivte.so", Clib.class);
 		
 		
 		
