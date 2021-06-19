@@ -3,6 +3,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+#include <assert.h>
+
 // Struct 1
 typedef struct  Struct{
 
@@ -17,6 +19,15 @@ typedef struct Struct1
     double d;
 }Struct1;
 
+
+
+// Struct containing an array of double
+typedef struct Struct2{
+
+    int size;
+    double * d;
+    
+}Struct2;
 
 
 
@@ -60,6 +71,7 @@ void sendDouble(const Struct1* s,int  size){
 
 }
 
+// Sends a array of struct containg double
 const Struct1* recieveDouble(int size){
 
     Struct1* s = (Struct1*) malloc(sizeof(Struct1*)*size);
@@ -70,3 +82,17 @@ const Struct1* recieveDouble(int size){
     }
     return s;
 }
+
+
+// Recieves an Struct which contains arrray of double
+void send_double_struct(const Struct2* s){
+
+    assert(NULL!=s);
+    for(int i=0;i<s->size;i++){
+
+        printf("%lf\n",s->d[i]);
+ 
+    }
+
+}
+
