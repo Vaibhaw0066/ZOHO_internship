@@ -18,7 +18,7 @@ public class Send_a_struct_containing_an_array_of_doubles_to_C {
 		public static class ByReference extends Struct implements Structure.ByReference{}
 		
 		public int size;
-		public Pointer double_array;
+		public Pointer double_array;  
 		
 	}
 	

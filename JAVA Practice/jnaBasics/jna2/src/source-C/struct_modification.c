@@ -1,8 +1,7 @@
 
 
 #include<stdlib.h>
-#include<stdio.h>
-
+#include <stdio.h>
 #include <assert.h>
 
 // Struct 1
@@ -28,6 +27,8 @@ typedef struct Struct2{
     double * d;
     
 }Struct2;
+
+
 
 
 
