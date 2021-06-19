@@ -22,6 +22,7 @@ public class Send_array_of_struct {
 	
 		Clib INSTANCE = (Clib)Native.load("/home/vaibhaw/Desktop/ZOHO_internship/JAVA Practice/jnaBasics/jna2/src/sharedLib/modify_struct.so",Clib.class);
 		
+		// Returns the sum of data member val from an struct Array
 		public int send_struct_array(Struct.ByReference Struct, int size);
 		
 		

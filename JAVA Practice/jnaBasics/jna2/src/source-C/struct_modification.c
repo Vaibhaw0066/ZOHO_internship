@@ -1,7 +1,7 @@
 
 
-
-
+#include<stdlib.h>
+#include<stdio.h>
 
 // Struct 1
 typedef struct  Struct{
@@ -9,6 +9,13 @@ typedef struct  Struct{
     int d;
 
 } Struct;
+
+
+// Struct containg double field
+typedef struct Struct1
+{
+    double d;
+}Struct1;
 
 
 
@@ -22,7 +29,7 @@ void modify(Struct* d){
 
 }
 
-// Receive an array of Structt from JAVA
+// Receive an array of Struct containg integers from JAVA
 int send_struct_array(const Struct* s, int n){
 
     int total = 0;
@@ -31,4 +38,24 @@ int send_struct_array(const Struct* s, int n){
         total+= s[i].d;
     } 
     return total;
+}
+
+
+// Send an array of Struct containg integers to JAVA
+const Struct* recieve(int size){
+
+    Struct *s = (Struct*)malloc(sizeof(Struct*)*size);
+    for(int i=0;i<size;i++)
+        s[i].d=i*i;
+    return s;
+}
+
+
+// Recieve an array of Struct1 containing double from JAVA
+void sendDouble(const Struct1* s,int  size){
+
+    printf("Recieved from JAVA: \n");
+    for(int i=0;i<size;i++)
+        printf("%lf \n",s[i].d);
+
 }
