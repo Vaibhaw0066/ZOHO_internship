@@ -59,3 +59,14 @@ void sendDouble(const Struct1* s,int  size){
         printf("%lf \n",s[i].d);
 
 }
+
+const Struct1* recieveDouble(int size){
+
+    Struct1* s = (Struct1*) malloc(sizeof(Struct1*)*size);
+
+    for(int i=1;i<=5;i++){
+
+        s[i-1].d = (double)(i*3)/5;
+    }
+    return s;
+}
