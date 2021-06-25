@@ -1,0 +1,3 @@
+sudo gedit /etc/ld.so.conf.d/randomLibs.conf
+sudo ldconfig
+
